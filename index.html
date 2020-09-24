@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MYspegale</title>
+  <link href="./media/images/favicon.ico" rel=" icon" type="image/x-ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="./static/css/indexNav.min.css" />
+  <link rel="stylesheet" href="./static/css/style.min.css" />
+  <!-- <base href="http://cdn.myspegale.tech"> -->
+</head>
+
+<body class="home-container">
+  <!-- 页面加载时显示 -->
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <!-- header 要展现出标题，做出座右铭滚动栏 -->
+  <div class="container">
+    <!-- nav 栏可以考虑重新设计，参考设计师求职网页 -->
+    <nav>
+      <div class="logo">
+        <div class="name">MYspegale</div>
+        <div class="BSMode">
+          <a href="#" class="BSMode-link">
+            <div class="BSMode-div">BSMode</div>
+          </a>
+        </div>
+      </div>
+      <div class="box"></div>
+      <ul class="nav-menu">
+        <li>
+          <a class="home">
+            <!-- <i class="fa fa-home"></i> -->
+            <div>首页</div>
+            <div class="nav-effect"></div>
+          </a>
+        </li>
+        <li>
+          <a class="blog">
+            <!-- <i class="fa fa-university"></i> -->
+            <div>博客园</div>
+            <div class="nav-effect"></div>
+          </a>
+        </li>
+        <li>
+          <a class="music">
+            <!-- <i class="fa fa-music"></i> -->
+            <div>音悦台</div>
+            <div class="nav-effect"></div>
+          </a>
+        </li>
+        <li>
+          <a class="movie">
+            <!-- <i class="fa fa-film"></i> -->
+            <div>光影馆</div>
+            <div class="nav-effect"></div>
+          </a>
+        </li>
+        <li>
+          <a class="me">
+            <!-- <i class="fa fa-id-card"></i> -->
+            <div>关于我</div>
+            <div class="nav-effect"></div>
+          </a>
+        </li>
+      </ul>
+      <div class="nav-btn">
+        <div class="top"></div>
+        <div class="mid"></div>
+        <div class="btm"></div>
+      </div>
+    </nav>
+    <div class="navbar"></div>
+
+    <header>
+      <div class="headerIMG">
+        <img src="./media/images/mainIMAGES/main-bg-pic.jpg" id="bg">
+      </div>
+      <div class="header-container">
+        <h1>MYspegale</h1>
+        <h2> — 我的世界 — </h2>
+        <div class="music-btn">
+          <audio id="playPause">
+            <source src="./media/audio/On_My_Own.mp3">
+            </source>
+          </audio>
+          <a href="javascript:playPause()">
+            <img src="./media/images/func_icons/pause.png" id="playPause-btn" />
+          </a>
+        </div>
+        <div class="motto">
+          <marquee scrollamount="1" direction="up" scrolldelay="200" onmouseover="this.stop()" onmouseout="this.start()">
+            —— 非淡泊无以明志，非宁静无以致远 —— <br /><br /><br />
+            —— Life is never PERFECT, IMperfect is life —— <br /><br /><br />
+            —— 爱我所爱，行我所行；听从我心，无问西东 ——
+          </marquee>
+        </div>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="blog-container">
+        <div class="title-container">
+          <div class="title">博客园</div>
+        </div>
+        <div class="blog-div">
+          <div class="blog-pic-info">
+            <img src="./media/images/mainIMAGES/blog-info-pic.jpg" alt="" />
+            <div class="blog-div-mask">
+              <a href="https://shenmingyu.github.io/blog/" class="blog-btn">
+                <div class="text-info">进入博客园</div>
+              </a>
+            </div>
+          </div>
+          <div class="blog-info-char">
+            <h3>我的博客园</h3>
+            <p>
+              博客园是此网页中的技术支柱，从2020年3月6日发布第一篇博客开始，我的技术生涯才算是刚刚开始，以后会将我的博客完整地复制一份放入这个网页当中，博文包括但不限于自学内容、学校学习内容、个人理解，也许会在博客园中增加日记模块，用来记录我的学习与生活，希望能够在此过程中收获更多，与所有大佬一起努力，共勉！
+            </p>
+          </div>
+          <div class="blog-zone-container">
+            <div class="card">
+              <div class="content">
+                <img src="./media/images/mainIMAGES/CATEGORIES.jpg" alt="FrontendLearning" />
+                <h2>WEB云</h2>
+                <p>建站/硬件/安全/解决方案</p>
+                <a href="https://www.myspegale.tech/blog/categories/">Read More</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <img src="./media/images/mainIMAGES/HACKER.jpg" alt="BackendLearning" />
+                <h2>编程</h2>
+                <p>JavaScript/C++/PHP/MySQL</p>
+                <a href="https://www.myspegale.tech/blog/categories/">Read More</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <img src="./media/images/mainIMAGES/COURSE.jpg" alt="CourseLearning" />
+                <h2>课程</h2>
+                <p>计算机/密码学/线代/算法</p>
+                <a href="https://www.myspegale.tech/blog/categories/">Read More</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <img src="./media/images/mainIMAGES/LIFE.jpg" alt="EnjoyMyLife" />
+                <h2>生活</h2>
+                <p>日记/随笔/心情</p>
+                <a href="https://www.myspegale.tech/blog/categories/">Read More</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <img src="./media/images/mainIMAGES/OTHER.jpg" alt="FrontendLearning" />
+                <h2>其他</h2>
+                <p>插件管理/游戏/动漫</p>
+                <a href="https://www.myspegale.tech/blog/categories/">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="music-container">
+        <div class="title-container">
+          <div class="title">音悦台</div>
+        </div>
+        <div class="music-info">
+          <p>～～～欢迎来到音悦台，在这里，可以在线听一些好听的歌曲音乐，暂不提供下载服务哦～～～</p>
+        </div>
+        <div class="music-div">
+          <ul>
+            <li class="electric-music">
+              <p>激昂电音</p>
+              <img src="./media/images/mainIMAGES/ElectricMusic.jpg" alt="" />
+              <div class="go">
+                <a href="">进入</a>
+              </div>
+            </li>
+            <li class="english-music">
+              <p>欧美之声</p>
+              <img src="./media/images/mainIMAGES/EnglishMusic.jpg" alt="" />
+              <div class="go">
+                <a href="">进入</a>
+              </div>
+            </li>
+            <li class="war-music">
+              <p>恢弘战歌</p>
+              <img src="./media/images/mainIMAGES/BattleMusic.jpg" alt="" />
+              <div class="go">
+                <a href="">进入</a>
+              </div>
+            </li>
+            <li class="chinese-music">
+              <p>乡土情怀</p>
+              <img src="./media/images/mainIMAGES/ChineseMusic.jpg" alt="" />
+              <div class="go">
+                <a href="./pages/music.html">进入</a>
+              </div>
+            </li>
+            <li class="pure-music">
+              <p>夜月纯音</p>
+              <img src="./media/images/mainIMAGES/PureMusic.jpg" alt="" />
+              <div class="go">
+                <a href="">进入</a>
+              </div>
+            </li>
+            <li class="japanese-music">
+              <p>日韩风情</p>
+              <img src="./media/images/mainIMAGES/JapaneseMusic.jpg" alt="" />
+              <div class="go">
+                <a href="">进入</a>
+              </div>
+            </li>
+            <li class="piano-music">
+              <p>纯琴永恒</p>
+              <img src="./media/images/mainIMAGES/PianoMusic.jpg" alt="" />
+              <div class="go">
+                <a href="">进入</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="movie-container">
+        <div class="title-container">
+          <div class="title">光影馆</div>
+        </div>
+        <div class="movie-div owl-carousel">
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Alita.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Alita: Battle Angel</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Avenger.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">The Avengers</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Clown.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">The Joker</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Frozen.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Frozen</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/GeminiWars.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Gemini Man：the art and making of the movie</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Godzilla.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Godzilla</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Gravity.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Gravity</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/HarryPotter.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Harry Potter</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Inception.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Inception</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Robot.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">WALL·E</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Speed.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Fast & Furious</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+          <div class="movie">
+            <img src="./media/images/mainIMAGES/Transformer.jpg" alt="" />
+            <div class="movie-description">
+              <div class="category">光影世界</div>
+              <h2 class="title">Transformers</h2>
+              <a href="#" class="movie-btn">Read More</a>
+            </div>
+            <div class="block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="me-container">
+        <div class="title-container">
+          <div class="title">关于我</div>
+        </div>
+        <div class="me-div">
+          <div class="profile-card">
+            <div class="top-section">
+              <div class="pic">
+                <img src="./media/images/mainIMAGES/Me.JPG" alt="" />
+              </div>
+              <div class="name">MYspegale</div>
+            </div>
+            <div class="bottom-section">
+              <div class="social-media">
+                <a href="">
+                  <i class="E-mail fa fa-envelope"></i>
+                </a>
+                <a href="">
+                  <i class="QQ fa fa-qq"></i>
+                </a>
+                <a href="">
+                  <i class="WeChat fa fa-wechat"></i>
+                </a>
+                <a href="">
+                  <i class="MicroBlog fa fa-weibo"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer style="z-index: 99;position: relative;left: 50%;bottom: 10px; width:100%;margin:10% auto 0;transform: translate(-50%);font-size: 10px;text-align: center;text-decoration: none;">
+      <a target="_blank" href="http://www.beian.miit.gov.cn/" style="text-decoration: none;">
+        <p style="color: #999">粤ICP备20018158号</p>
+      </a>
+      <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030302001525" style="margin: 0 auto 0;height: 10px; width:100%; text-decoration: none;">
+        <img src="media/images/备案图标.png" style="display: inline-block;width: 10px;height: 10px" />
+        <p style="display:inline-block;color: #999">粤公网安备44030302001525号</p>
+      </a>
+    </footer>
+
+  </div>
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.5.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.staticfile.org/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+  <script type="text/javascript" src="./static/js/nav.js"></script>
+  <script type="text/javascript" src="./static/js/bg.js"></script>
+  <script type="text/javascript" src="./static/js/main_audio_s&p.js"></script>
+  <script type="text/javascript" src="./static/js/anchor.js"></script>
+  <script type="text/javascript" src="./static/js/loading.js"></script>
+  <script type="text/javascript" src="./static/js/slide_show.js"></script>
+</body>
+
+
+</html>

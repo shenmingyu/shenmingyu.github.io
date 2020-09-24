@@ -1,0 +1,341 @@
+$navBSModeBG: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+$navBG: #05202e99;
+$navLogoBG: linear-gradient(to right, #00FFFF, #00FFBB, #77FF22, #BBEE33, #FFEE33, #FFDD11, #FFAA55, #FF8844, #FF6699, #FF2266, #FF1144, #CC22AA, #8822BB, #4411ff, #1133FF);
+$navLogoFontColor: #fff;
+$navbarCustomizeColor: linear-gradient(to right, #00FFFF, #00FFBB, #77FF22, #BBEE33, #FFEE33, #FFDD11, #FFAA55, #FF8844, #FF6699, #FF2266, #FF1144, #CC22AA, #8822BB, #1133FF, #11AAFF, #00FFFF);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
+}
+
+body {
+	.container {
+		nav {
+			display: flex;
+			flex: 1;
+			position: fixed;
+			z-index: 99;
+			height: 3.2rem;
+			width: 100vw;
+			padding: 0 5% 0;
+			top: 0;
+			left: 0;
+			align-items: center;
+			justify-content: space-between;
+			background-color: $navBG;
+			backdrop-filter: blur(1rem) brightness(80%);
+
+			.logo {
+				display: flex;
+				flex: 1;
+				width: auto;
+				height: 100%;
+				justify-content: space-evenly;
+				align-items: center;
+
+				.name {
+					margin-right: 1.2rem;
+					font-size: 1.5rem;
+					cursor: default;
+					background: $navLogoBG;
+					background-clip: text;
+					-webkit-background-clip: text;
+					color: transparent;
+				}
+
+				.BSMode {
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					margin: 0 1rem 0;
+
+					.BSMode-link {
+						display: flex;
+						position: relative;
+						width: 100%;
+						height: 100%;
+						padding: 0 1rem 0;
+						transition: 0.5s;
+						text-decoration: none;
+						color: $navLogoFontColor;
+						justify-content: center;
+						align-items: center;
+
+						.BSModeDiv {
+							display: inline-block;
+							width: 100%;
+							height: 100%;
+							color: $navLogoFontColor;
+							text-align: center;
+						}
+
+						&:before {
+							content: "";
+							position: absolute;
+							top: -2px;
+							left: -2px;
+							right: -2px;
+							bottom: -2px;
+							background: $navBSModeBG;
+							opacity: 0;
+							filter: blur(1rem);
+							transition: 0.3s;
+						}
+
+						&:hover {
+							border-radius: 2rem;
+							background: $navBSModeBG;
+							background-size: 600%;
+							animation: BSMode 12s linear infinite;
+							transition: 0.3s;
+
+							&:before {
+								z-index: -1;
+								opacity: 1;
+								border-radius: 2rem;
+								background-size: 600%;
+								animation: BSMode 12s linear infinite;
+							}
+						}
+
+						@keyframes BSMode {
+							0% {
+								background-position: 0%;
+							}
+
+							100% {
+								background-position: 400%;
+							}
+						}
+					}
+				}
+			}
+
+			.box {
+				flex: 3;
+			}
+
+			.nav-menu {
+				display: flex;
+				flex: 5;
+				justify-content: space-evenly;
+				color: $navLogoFontColor;
+				list-style: none;
+
+				li {
+					position: relative;
+					margin: 0 0.5rem 0;
+					cursor: pointer;
+
+					a {
+						color: $navLogoFontColor;
+						text-decoration: none;
+
+						&::before {
+							content: "";
+							position: absolute;
+							left: -1rem;
+							height: 120%;
+							width: 2px;
+							background: $navbarCustomizeColor;
+							background-size: 400rem 400rem;
+							transform: scaleY(0);
+							transform-origin: bottom;
+							transition: 0.15s ease-in-out;
+							animation: effect 12s linear infinite 2s;
+						}
+
+						&::after {
+							content: "";
+							position: absolute;
+							right: -1rem;
+							top: 0;
+							height: 120%;
+							width: 2px;
+							background: $navbarCustomizeColor;
+							background-size: 400rem 400rem;
+							transform: scaleY(0);
+							transform-origin: bottom;
+							transition: 0.15s ease-in-out;
+							animation: effect 12s linear infinite 2s;
+						}
+
+						.nav-effect {
+							position: absolute;
+							bottom: -5px;
+							height: 2px;
+							width: 100%;
+							background: $navbarCustomizeColor;
+							background-size: 400rem 400rem;
+							transform: scaleX(0);
+							transform-origin: bottom;
+							transition: 0.15s ease-in-out 0.15s;
+							animation: effect 12s linear infinite 2s;
+						}
+					}
+
+					&:hover>a::before {
+						transform: scaleY(1);
+						transition: 0.15s ease-in-out 0.15s;
+					}
+
+					&:hover>a::after {
+						transform: scaleY(1);
+						transition: 0.15s ease-in-out 0.15s;
+					}
+
+					&:hover>a .nav-effect {
+						transform: scaleX(1);
+						transition: 0.15s ease-in-out;
+					}
+
+					@keyframes effect {
+						100% {
+							background-position: 400rem 0px;
+						}
+					}
+				}
+			}
+
+			.nav-btn {
+				display: none;
+				cursor: pointer;
+
+				div {
+					width: 25px;
+					height: 3px;
+					background-color: $navLogoFontColor;
+					margin: 4px;
+					border-radius: 3px;
+				}
+			}
+		}
+
+		.navbar {
+			z-index: 99;
+			position: fixed;
+			top: 3.2rem;
+			width: 100%;
+			height: 0.2rem;
+			background: $navbarCustomizeColor;
+			background-size: 400rem 400rem;
+			box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.5);
+			animation: gradientBG 12s linear infinite;
+		}
+
+		@keyframes gradientBG {
+			100% {
+				background-position: 400rem 0;
+			}
+		}
+
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav-menu {
+		position: fixed;
+		top: 3.2rem;
+		right: 0;
+		bottom: 0;
+		width: 100vw;
+		height: calc(100vh - 3.2rem);
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		background-color: $navBG;
+		backdrop-filter: blur(1rem) brightness(80%);
+		-webkit-backdrop-filter: blur(1rem) brightness(80%);
+		transform: translate(100%, -50%) scale(0);
+
+		li {
+			font-size: 1.5em;
+			font-weight: lighter;
+			transform: translateX(3rem);
+			opacity: 0;
+		}
+	}
+
+	.nav-btn {
+		display: block !important;
+	}
+
+	.active {
+		div {
+			transition: 0.3s ease-in-out 0.1s;
+		}
+
+		.top {
+			transform: rotate(45deg) translate(5px, 5px);
+		}
+
+		.mid {
+			opacity: 0;
+			transform: rotate(180deg);
+			transition: 0.3s ease-in-out 0.1s;
+		}
+
+		.btm {
+			transform: rotate(135deg) translate(-5px, 5px);
+		}
+	}
+
+	.inactive {
+		div {
+			transition: 0.3s ease-in-out 0.1s;
+		}
+
+		.top {
+			transform: rotate(0) translate(0, 0);
+		}
+
+		.mid {
+			opacity: 1;
+			transform: rotate(0);
+			transition: 0.3s ease-in-out 0.1s;
+		}
+
+		.btm {
+			transform: rotate(0) translate(0, 0);
+		}
+	}
+
+
+	.open {
+		transform: translate(0, 0) scale(1.0);
+		transition: 0.3s ease-in-out;
+	}
+
+	.close {
+		transform: translate(100vw, -45vh) scale(0);
+		transition: 0.3s ease-in-out 0.9s;
+
+	}
+
+	@keyframes slideIn {
+		from {
+			transform: translateX(3rem);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideOut {
+		from {
+			transform: translateX(0);
+			opacity: 1;
+		}
+
+		to {
+			transform: translateX(3rem);
+			opacity: 0;
+		}
+	}
+}
