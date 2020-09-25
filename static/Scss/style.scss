@@ -201,6 +201,7 @@ body {
 
     .main-container {
       position: relative;
+      height: 100vh;
       top: -6rem;
       background-color: #FFF;
 
@@ -257,11 +258,10 @@ body {
               width: 100%;
               max-width: 50rem;
               height: 100%;
-              margin: 0;
               border-radius: 50%;
               justify-content: center;
               align-items: center;
-              transition: 0.5s linear;
+              transition: 0.5s ease;
 
               &:hover {
                 background: $maskAfter;
@@ -377,7 +377,8 @@ body {
             position: relative;
             display: flex;
             flex-wrap: wrap;
-            padding: 5%;
+            width: 100%;
+            padding: 4%;
             justify-content: space-around;
             background: linear-gradient($btnBeforeDark, white);
             transition: 0.4s ease-in-out;
@@ -391,7 +392,7 @@ body {
 
             .card {
               position: relative;
-              width: 14rem;
+              width: 15rem;
               height: 18rem;
               margin: .3rem;
               display: flex;
@@ -442,7 +443,7 @@ body {
                 &:before {
                   z-index: 2;
                   background: #000;
-                  transform: scale(1.25);
+                  transform: scale(1.2);
                   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
                 }
 
@@ -713,6 +714,7 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
+          flex-direction: column;
 
           .profile-card {
             margin-top: 5rem;
